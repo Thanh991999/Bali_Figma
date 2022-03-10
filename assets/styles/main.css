@@ -169,9 +169,6 @@
 
 /* container */
 
-.container {
-    
-}
 
 .container-img {
     background-image: url(../image/img1.png);
@@ -321,6 +318,7 @@
     border-radius: 50%;
     background-color: var(--primary-color);
     display: flex;
+    box-shadow: 0 0 1px #000;
 }
 
 .mesage-icon img {
@@ -331,6 +329,7 @@
     font-size: 1.3rem;
     line-height: 1.9rem;
     color: var(--primary-color);
+    text-shadow: 1px 1px black;
 }
 
 /* exclusive offers*/
@@ -351,10 +350,6 @@
     padding-top: 64px;
     margin: 0;
     font-weight: 500;
-}
-
-.exclusive-sale {
-   
 }
 
 .exclusive-sale__wrap {
@@ -537,9 +532,6 @@
     cursor: pointer;
 }
 
-.most-places__img-wrap img {
-    
-}
 
 .most-places__text {
     line-height: 3.8rem;
