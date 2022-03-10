@@ -6,50 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/image/iconOfWeb.png">
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/styles/base.css">
     <link rel="stylesheet" href="./assets/styles/grid.css">
     <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="stylesheet" href="./assets/styles/responsive.css">
+
     
     <title>Bali Figma</title>
 </head>
-<body>
 
+<body>
     <div class="app">    
         <div class="header">
-            <div class="header-nav grid wide">
+            <div class="header-nav wide-mob grid wide">
+                <div class="menu-on-tab-mob">
+                    <i class="bi bi-list"></i>
+                </div>
                 <a href="#" class="nav-logo">
                     Explore Bali
                 </a>
+                <div class="overlay-menu"></div>
                 <div class="nav-menu">
                     <ul class="nav-menu__list">
+                        
                         <li class="nav-menu__items">
                             <a href="#" class="nav-menu__link">
                                 Home
+                                <i class="bi bi-chevron-down hide-on-pc menu-icon-tab-mob"></i>
                             </a>
                         </li>
 
                         <li class="nav-menu__items">
                             <a href="#" class="nav-menu__link">
                                 Explore
+                                <i class="bi bi-chevron-down hide-on-pc menu-icon-tab-mob"></i>
                             </a>
                         </li>
 
                         <li class="nav-menu__items">
                             <a href="#" class="nav-menu__link">
                                 Plan your trip
+                                <i class="bi bi-chevron-down hide-on-pc menu-icon-tab-mob"></i>
                             </a>
                         </li>
 
                         <li class="nav-menu__items">
                             <a href="#" class="nav-menu__link">
                                 Updates
+                                <i class="bi bi-chevron-down hide-on-pc menu-icon-tab-mob"></i>
                             </a>
                         </li>
 
                         <li class="nav-menu__items">
                             <a href="#" class="nav-menu__link">
                                 Contact us
+                                <i class="bi bi-chevron-down hide-on-pc menu-icon-tab-mob"></i>
                             </a>
                         </li>
                     </ul>
@@ -60,10 +73,36 @@
                         Signup
                     </a>
 
-                    <a href="#" class="nav-func__languages">
+                    <div class="nav-func__languages">
                         EN
                         <img src="./assets/icon/arrow-down.svg" class="nav-func__languages-icon" alt="">
-                    </a>
+                        <ul class="header__nav-languages">
+                            <li class="header__nav-languages-lists">
+                                <a href="" class="header__nav-languages-link">
+                                    <img class="header__nav-img" src="./assets/image/flag1.jpg" alt="">
+                                    English
+                                </a>
+                            </li>
+                            <li class="header__nav-languages-lists">
+                                <a href="" class="header__nav-languages-link">
+                                    <img src="./assets/image/flag2.jpg" alt="" class="header__nav-img">
+                                    Russian
+                                </a>
+                            </li>
+                            <li class="header__nav-languages-lists">
+                                <a href="" class="header__nav-languages-link">
+                                    <img src="./assets/image/flag3.jpg" alt="" class="header__nav-img">
+                                    Brazil
+                                </a>
+                            </li>
+                            <li class="header__nav-languages-lists">
+                                <a href="" class="header__nav-languages-link">
+                                    <img src="./assets/image/flag4.jpg" alt="" class="header__nav-img">
+                                    France
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
@@ -71,45 +110,62 @@
 
         <div class="container">
             <div class="container-img">
-                <div class="text-grap">
+                <div class="text-wrap">
                     <h1 class="text-heading">Experience the Richness in Bali</h1>
                     <p class="text-title">From the incredible variety of beauty and culture since ancient times, experience the divine beauty.</p>
-                    <div class="info">
-                        <div class="info-grap">
+                    <div class="book-ticket hide-on-pc">
+                        Book your tickets now
+                    </div>
+                    
+                    <div class="info ">
+                        <div class="info-wrap ">
+                            <div class="close-icon hide-on-pc">
+                                <i class="bi bi-x"></i>
+                            </div>
                             <div class="info-from">
                                 From
-                                <div class="info-from__choose">
-                                    Destination
-                                    <img src="./assets/icon/arrow-down-thin.svg" alt="">
+                                <div class="form-group ">
+                                    <select id="province" name="province" class="form-province"> 
+                                        <option value="">Location</option>
+                                        <option value="hni">Hà Nội</option>
+                                        <option value="hpg">Hải Phòng</option>
+                                        <option value="hcm">Hồ Chí Minh</option>
+
+                                    </select>
                                 </div>
+
                             </div>
                             <div class="info-from">
                                 To
-                                <div class="info-from__choose">
-                                    week/month
-                                    <img class="info-from__icon" src="./assets/icon/calender.svg" alt="">
+                                <div class="form-group ">
+                                    <select id="province" name="province" class="form-province"> 
+                                        <option value="">Destination</option>
+                                        <option value="hni">Hà Nội</option>
+                                        <option value="hpg">Hải Phòng</option>
+                                        <option value="hcm">Hồ Chí Minh</option>
+
+                                    </select>
                                 </div>
+                                
                             </div>
                             <div class="info-from">
                                 Duration
-                                <!-- <input type="month" value="days/week" name="" id=""> -->
-                                <div class="info-from__choose">
-                                    days/week
-                                    <img class="info-from__icon" src="./assets/icon/clock.svg" alt="">
-                                </div>
+                                <input class="form-calendar" id="week" type="week" name="week" value="2022-W10">
                             </div>
                             <div class="info-from info-from__persons">
                                 Persons
-                                
-                                <div class="info-from__choose">
-                                    2
-                                    <img src="./assets/icon/arrow-down-thin.svg" alt="">
+                                <div class="form-group info-from__persons">
+                                    <select id="province" name="province" class="form-province"> 
+                                        <option value="">2</option>
+                                        <option >1</option>
+                                        <option >2</option>
+                                        <option >3</option>
+                                        <option >4</option>
+                                        <option >5</option>
+                                    </select>
                                 </div>
                             </div>
-
-                            <a href="#" class="search-btn">
-                                Search
-                            </a>
+                            <input class="search-btn" type="submit" value="Search">
                         </div>
                         
                     </div>
@@ -117,95 +173,78 @@
                 
             </div>
 
-            <div class="taskbar">
-                <img class="taskbar-icon" src="./assets/icon/Phone.svg" alt="">
-        
-                <img class="taskbar-icon" src="./assets/icon/ins.svg" alt="">
-        
-                <img class="taskbar-icon" src="./assets/icon/fb.svg" alt="">
-        
-                <img class="taskbar-icon" src="./assets/icon/twice.svg" alt="">
-    
-                <img class="taskbar-icon" src="./assets/icon/yt.svg" alt="">
-    
-            </div>
-    
-            <div class="mesage">
-                <div class="mesage-icon">
-                    <img src="./assets/icon/message.svg" alt="">
-                </div>
-                <div class="mesage-text">How do i</div>
-            </div>
-
+           
             <!-- Exclusive offers!!  -->
 
-            <div class="exclusive">
-                <div class="exclusive-title">
-                    Exclusive offers!! 
-                </div>
+            <div class="exclusive ">
+               <div class="exclusive-wrap grid wide wide-exclusive-tab">
+                    <h2 class="exclusive-title">
+                        Exclusive offers!! 
+                    </h2>
 
-                <div class="exclusive-sale grid wide">
-                    <div class="exclusive-sale__grap ">
-                        <div class="row">
-                            <div class="col l-4">
-                                <div style="background-image: url(./assets/image/sale-1.jpg)" class="exclusive-img">
-                                    <div class="percent-sale">
-                                        20% off 
+                    <div class="exclusive-sale">
+                        <div class="exclusive-sale__wrap ">
+                            <div class="row">
+                                <div class="col l-4 m-4 c-12 mb-30">
+                                    <div style="background: url(./assets/image/sale-1.jpg) no-repeat center;" class="exclusive-img">
+                                        <div class="percent-sale">
+                                            20% off 
+                                        </div>
+                                        <div class="nav-logo-sale">
+                                            <span>Explore Bali</span>
+                                        </div>
                                     </div>
-                                    <div class="nav-logo-sale">
-                                        <span>Explore Bali</span>
-                                    </div>
+            
+                                    <span class="exclusive-more">
+                                        Learn more
+                                    </span>
                                 </div>
-        
-                                <span class="exclusive-more">
-                                    Learn more
-                                </span>
-                            </div>
 
-                            <div class="col l-4">
-                                <div style="background-image: url(./assets/image/sale-2.jpg)" class="exclusive-img">
-                                    <div class="percent-sale">
-                                        25% off 
+                                <div class="col l-4 m-4 c-12 mb-30">
+                                    <div style="background: url(./assets/image/sale-2.jpg) no-repeat center;" class="exclusive-img">
+                                        <div class="percent-sale">
+                                            25% off 
+                                        </div>
+                                        <div class="nav-logo-sale">
+                                            <span>Explore Bali</span>
+                                        </div>
                                     </div>
-                                    <div class="nav-logo-sale">
-                                        <span>Explore Bali</span>
-                                    </div>
+            
+                                    <span class="exclusive-more">
+                                        Learn more
+                                    </span>
                                 </div>
-        
-                                <span class="exclusive-more">
-                                    Learn more
-                                </span>
-                            </div>
 
-                            <div class="col l-4">
-                                <div style="background-image: url(./assets/image/sale-3.jpg)" class="exclusive-img">
-                                    <div class="percent-sale">
-                                        22% off 
+                                <div class="col l-4 m-4 c-12 mb-30">
+                                    <div style="background: url(./assets/image/sale-3.jpg) no-repeat center;" class="exclusive-img">
+                                        <div class="percent-sale">
+                                            22% off 
+                                        </div>
+                                        <div class="nav-logo-sale">
+                                            <span>Explore Bali</span>
+                                        </div>
                                     </div>
-                                    <div class="nav-logo-sale">
-                                        <span>Explore Bali</span>
-                                    </div>
+            
+                                    <span class="exclusive-more">
+                                        Learn more
+                                    </span>
                                 </div>
-        
-                                <span class="exclusive-more">
-                                    Learn more
-                                </span>
                             </div>
                         </div>
+                        
                     </div>
-                    
-                </div>
+               </div>
             </div>
 
             <!-- Our most visited places -->
 
             <div class="most-visited">
                 <div class="most-visited__img"></div>
-                <p class="most-visited__title">Our most visited places</p>
-                <div class="most-visited__grap">
+                <h2 class="most-visited__title">Our most visited places</h2>
+                <div class="most-visited__wrap">
                     
                     <div class="most-places__img a ">
-                        <div class="most-places__img-grap">
+                        <div class="most-places__img-wrap">
                             <div class="img1">
                                 <img class="img" src="./assets/image/place4.png" alt="">
                                 <div style="font-size: 2rem; line-height: 3em;" class="most-places__text">Mount Batur</div>
@@ -215,7 +254,7 @@
                     </div>
 
                     <div class="most-places__img b">
-                        <div class="most-places__img-grap">
+                        <div class="most-places__img-wrap">
                             <div class="img2">
                                 <img class=" img" src="./assets/image/place2.png" alt="">
                                 <div style="font-size: 2.2rem; line-height:3.3rem;" class="most-places__text">Uluwatu Temple</div>
@@ -225,7 +264,7 @@
                     </div>
 
                     <div class="most-places__img c active">
-                        <div class="most-places__img-grap">
+                        <div class="most-places__img-wrap">
                             <div class="img3">
                                 <img class=" img" src="./assets/image/place3.png" alt="">
                                 <div class="most-places__text">Pura Tanah Lot</div>
@@ -237,7 +276,7 @@
                     </div>
                     
                     <div class="most-places__img d">
-                        <div class="most-places__img-grap">
+                        <div class="most-places__img-wrap">
                             <div class="img4">
                                 <img class="img" src="./assets/image/place4.png" alt="">
                                 <div style="font-size: 2.2rem; line-height:3.3rem;" class="most-places__text">Mount Batur</div>
@@ -249,7 +288,7 @@
                     </div>
 
                     <div class="most-places__img e">
-                        <div class="most-places__img-grap">
+                        <div class="most-places__img-wrap">
                             <div class="img5 ">
                                 <img class="img"  src="./assets/image/place2.png" alt="">
                                 <div style="font-size: 2rem; line-height:3rem;" class="most-places__text">Uluwatu Temple</div>
@@ -264,13 +303,13 @@
                     
                 </div>
 
-                <div class="explore-btn__grap">
+                <div class="explore-btn__wrap">
                     <a href="#" class="explore-btn">
                         Explore >>
                     </a>
                 </div>
 
-                <p class="most-visited__title most-visited__title-last">Our Trusted partners</p>
+                <h2 class="most-visited__title most-visited__title-last">Our Trusted partners</h2>
 
                 
 
@@ -279,160 +318,268 @@
             <!-- advertise -->
 
             <div class="advertise">
-                <a href="#" class="advertise-img">
-                    <img src="./assets/image/ad1.png" alt="">
-                </a>
-                <a href="#" class="advertise-img">
-                    <img src="./assets/image/ad2.png" alt="">
-                </a>
-                <a href="#" class="advertise-img">
-                    <img src="./assets/image/ad3.png" alt="">
-                </a>
-                <a href="#" class="advertise-img">
-                    <img src="./assets/image/ad4.png" alt="">
-                </a>
-                <a href="#" class="advertise-img">
-                    <img src="./assets/image/ad5.png" alt="">
-                </a>
-                <a href="#" class="advertise-img">
-                    <img src="./assets/image/ad6.png" alt="">
-                </a>
+                <div class="advertise-wrap row">
+                    <div href="#" class="advertise-img c-12 m-6 l-2">
+                        <img src="./assets/image/ad1.png" alt="">
+                    </div>
+                    <div href="#" class="advertise-img c-12 m-6 l-2">
+                        <img src="./assets/image/ad2.png" alt="">
+                    </div>
+                    <div href="#" class="advertise-img c-12 m-6 l-2">
+                        <img src="./assets/image/ad3.png" alt="">
+                    </div>
+                    <div href="#" class="advertise-img c-12 m-6 l-2">
+                        <img src="./assets/image/ad4.png" alt="">
+                    </div>
+                    <div href="#" class="advertise-img c-12 m-6 l-2">
+                        <img src="./assets/image/ad5.png" alt="">
+                    </div>
+                    <div href="#" class="advertise-img c-12 m-6 l-2">
+                        <img src="./assets/image/ad6.png" alt="">
+                    </div>
+                </div>
 
             </div>
 
             <!-- ours service -->
             <div class="service">
+               <div class="service-wrap grid wide1">
                 <div class="service-title">Our Services</div>
 
-                <div class="grid wide1">
-                    <div class="row gutter-small service-info__grap ">
-                        <div class="col l-4 gutter-small ">
+
+                    <div class="row sm-gutter service-info__wrap ">
+                        <div class="col l-4 m-6 mb-30 c-12 pc-low-service ">
                             <div class="service-info">
                                 <div class="service-icon">
                                     <img src="./assets/icon/service-1.svg" alt="">
                                 </div>
-                                <div class="service-options">
+                                <h3 class="service-options">
                                     Travel Insurance
-                                </div>
+                                </h3>
                                 <p class="service-description">
                                     When we travel, most of us do so on a budget. This is where a travel insurance comes in use, is helpful for us and helps...
                                 </p>
                             </div>
                         </div>
 
-                        <div class="col l-4 gutter-small ">
+                        <div class="col l-4 m-6 mb-30 c-12 pc-low-service ">
                             <div class="service-info">
                                 <div class="service-icon">
                                     <img src="./assets/icon/service-2.svg" alt="">
                                 </div>
-                                <div class="service-options">
+                                <h3 class="service-options">
                                     Medical care
-                                </div>
+                                </h3>
                                 <p class="service-description">
                                     Rated as one of the top ten journals in healthcare administration, Medical Care is devoted to all aspects of..
                                 </p>
                             </div>
                         </div>
 
-                        <div class="col l-4 gutter-small ">
+                        <div class="col l-4 m-6 mb-30 c-12 pc-low-service ">
                             <div class="service-info">
                                 <div class="service-icon">
                                     <img src="./assets/icon/service-3.svg" alt="">
                                 </div>
-                                <div class="service-options">
+                                <h3 class="service-options">
                                     Customer care
-                                </div>
+                                </h3>
                                 <p class="service-description">
                                     When we travel, most of us do so on a budget. This is where a travel insurance comes in use, is helpful for us and helps...
                                 </p>
                             </div>
                         </div>
 
-                        
-                    </div>
-
-                    <div class="row gutter-small service-info__grap">
-                        <div class="col l-4 gutter-small ">
+                        <div class="col l-4 m-6 mb-30 c-12 pc-low-service ">
                             <div class="service-info">
                                 <div class="service-icon">
                                     <img src="./assets/icon/service-4.svg" alt="">
                                 </div>
-                                <div class="service-options">
+                                <h3 class="service-options">
                                     Logistics
-                                </div>
+                                </h3>
                                 <p class="service-description">
                                     When we travel, most of us do so on a budget. This is where a travel insurance comes in use, is helpful for us and helps...
                                 </p>
                             </div>
                         </div>
 
-                        <div class="col l-4 gutter-small ">
+                        <div class="col l-4 m-6 mb-30 c-12 pc-low-service ">
                             <div class="service-info">
                                 <div class="service-icon">
                                     <img src="./assets/icon/service-5.svg" alt="">
                                 </div>
-                                <div class="service-options">
+                                <h3 class="service-options">
                                     Travel documentation
-                                </div>
+                                </h3>
                                 <p class="service-description">
                                     Rated as one of the top ten journals in healthcare administration, Medical Care is devoted to all aspects of..
                                 </p>
                             </div>
                         </div>
 
-                        <div class="col l-4 gutter-small ">
+                        <div class="col l-4 m-6 mb-30 c-12 pc-low-service ">
                             <div class="service-info">
                                 <div class="service-icon">
                                     <img src="./assets/icon/service-6.svg" alt="">
                                 </div>
-                                <div class="service-options">
+                                <h3 class="service-options">
                                     Meal discounts
-                                </div>
+                                </h3>
                                 <p class="service-description">
                                     When we travel, most of us do so on a budget. This is where a travel insurance comes in use, is helpful for us and helps...
                                 </p>
                             </div>
                         </div>
-
                         
                     </div>
 
-
-                </div>
+                
+               </div>
 
             </div>
 
             <!-- Loved by customers -->
 
             <div class="customers">
-                <div class="customers-grap grid wide2">
-                    <div class="service-title customers-title">Loved by customers</div>
+                <div class="customers-wrap grid wide2">
+                    <h2 class="service-title customers-title">Loved by customers</h2>
               
-                    <div class="customers-review">
-                        <a href="#" class="">
+                   <div class="customers-container">
+                        <a class="customers-review__icon-left" class="">
                             <img src="./assets/icon/arrow-left.svg" alt="">
                         </a>
-                        <div class="customers-review__grap">
-                            <img class="customers-review__img" src="./assets/image/customers.png" alt="">
-                            <div class="customers-info">
-                                <div class="customers-info__name">-Amit Bharadwaj</div>
-                                <div class="customers-info__star">
-                                    <img src="./assets/icon/star.svg" alt="">
-                                    <img src="./assets/icon/star.svg" alt="">
-                                    <img src="./assets/icon/star.svg" alt="">
-                                    <img src="./assets/icon/star.svg" alt="">
-                                    <img src="./assets/icon/star.svg" alt="">
-                                </div>
-                                <p class="customers-info__descrip">
-                                    Loved the experience in Bali, specially in the Islands of bali which are truly escotic and enriching. From spiritual practices to incredible hospitality, loved each bit of it. Special thanks to Explore Bali for setting up the amazing experiences from people worldwide so far. I will surely recommend this to my friends and family, live, love, explore and travel!
-                                </p>
-                            </div>
-                        </div>
-                        <a href="#" class="">
+
+                        <a class="customers-review__icon-right" class="">
                             <img src="./assets/icon/arrow-right.svg" alt="">
                         </a>
 
-                    </div>
+                        <div class="customers-container__main">
+                            <div class="customers-review">
+                            
+                                <div id="lastClone" class="customers-review__wrap">
+                                    <img class="customers-review__img" src="./assets/image/travel-4.jpg" alt="">
+    
+                                    <div class="customers-info">
+                                        <div class="customers-info__name">-Amit Bharadwaj</div>
+                                        <div class="customers-info__star">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                        </div>
+                                        <p class="customers-info__descrip">
+                                            Loved the experience in Bali, specially in the Islands of bali which are truly escotic and enriching. From spiritual practices to incredible hospitality, loved each bit of it. Special thanks to Explore Bali for setting up the amazing experiences from people worldwide so far. I will surely recommend this to my friends and family, live, love, explore and travel!
+                                        </p>
+                                    </div>
+                                </div>
+    
+                                <div class="customers-review__wrap">
+                                    <img class="customers-review__img" src="./assets/image/customers.png" alt="">
+                                    <div class="customers-info">
+                                        <div class="customers-info__name">-Amit Bharadwaj</div>
+                                        <div class="customers-info__star">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                        </div>
+                                        <p class="customers-info__descrip">
+                                            Loved the experience in Bali, specially in the Islands of bali which are truly escotic and enriching. From spiritual practices to incredible hospitality, loved each bit of it. Special thanks to Explore Bali for setting up the amazing experiences from people worldwide so far. I will surely recommend this to my friends and family, live, love, explore and travel!
+                                        </p>
+                                    </div>
+                                </div>
+    
+                                <div class="customers-review__wrap">
+                                    <img class="customers-review__img" src="./assets/image/travel-1.jpg" alt="">
+                                    <div class="customers-info">
+                                        <div class="customers-info__name">-Amit Bharadwaj</div>
+                                        <div class="customers-info__star">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                        </div>
+                                        <p class="customers-info__descrip">
+                                            Loved the experience in Bali, specially in the Islands of bali which are truly escotic and enriching. From spiritual practices to incredible hospitality, loved each bit of it. Special thanks to Explore Bali for setting up the amazing experiences from people worldwide so far. I will surely recommend this to my friends and family, live, love, explore and travel!
+                                        </p>
+                                    </div>
+                                </div>
+    
+                                <div class="customers-review__wrap">
+                                    <img class="customers-review__img" src="./assets/image/travel-2.jpg" alt="">
+                                    <div class="customers-info">
+                                        <div class="customers-info__name">-Amit Bharadwaj</div>
+                                        <div class="customers-info__star">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                        </div>
+                                        <p class="customers-info__descrip">
+                                            Loved the experience in Bali, specially in the Islands of bali which are truly escotic and enriching. From spiritual practices to incredible hospitality, loved each bit of it. Special thanks to Explore Bali for setting up the amazing experiences from people worldwide so far. I will surely recommend this to my friends and family, live, love, explore and travel!
+                                        </p>
+                                    </div>
+                                </div>
+    
+                                <div class="customers-review__wrap">
+                                    <img class="customers-review__img" src="./assets/image/travel-3.jpg" alt="">
+                                    <div class="customers-info">
+                                        <div class="customers-info__name">-Amit Bharadwaj</div>
+                                        <div class="customers-info__star">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                        </div>
+                                        <p class="customers-info__descrip">
+                                            Loved the experience in Bali, specially in the Islands of bali which are truly escotic and enriching. From spiritual practices to incredible hospitality, loved each bit of it. Special thanks to Explore Bali for setting up the amazing experiences from people worldwide so far. I will surely recommend this to my friends and family, live, love, explore and travel!
+                                        </p>
+                                    </div>
+                                </div>
+    
+                                <div class="customers-review__wrap">
+                                    <img class="customers-review__img" src="./assets/image/travel-4.jpg" alt="">
+                                    <div class="customers-info">
+                                        <div class="customers-info__name">-Amit Bharadwaj</div>
+                                        <div class="customers-info__star">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                        </div>
+                                        <p class="customers-info__descrip">
+                                            Loved the experience in Bali, specially in the Islands of bali which are truly escotic and enriching. From spiritual practices to incredible hospitality, loved each bit of it. Special thanks to Explore Bali for setting up the amazing experiences from people worldwide so far. I will surely recommend this to my friends and family, live, love, explore and travel!
+                                        </p>
+                                    </div>
+                                </div>
+    
+                                <div id="firstClone" class="customers-review__wrap">
+                                    <img class="customers-review__img" src="./assets/image/customers.png" alt="">
+    
+                                    <div class="customers-info">
+                                        <div class="customers-info__name">-Amit Bharadwaj</div>
+                                        <div class="customers-info__star">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                            <img src="./assets/icon/star.svg" alt="">
+                                        </div>
+                                        <p class="customers-info__descrip">
+                                            Loved the experience in Bali, specially in the Islands of bali which are truly escotic and enriching. From spiritual practices to incredible hospitality, loved each bit of it. Special thanks to Explore Bali for setting up the amazing experiences from people worldwide so far. I will surely recommend this to my friends and family, live, love, explore and travel!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
                 </div>
             </div>
             
@@ -444,48 +591,47 @@
         </div>
 
         <div class="footer">
-            <div class="grid wide footer-grap">
+            <div class="grid wide wide-tab footer-wrap">
 
-                <div class="nav-logo footer-logo">
-                    Explore Bali
-                </div>
-
-                <div class="row footer-row" >
-                    <div class="col l-12">
-                        <div class="row no-gutters ">
-                            <div class="col no-gutters l-4">
-                                <div class="footer-heading">Menu</div>
-                                <ul class="footer-list">
-                                    <li class="footer-list__item">
-                                        <a href="#" class="footer-list__item-link">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li class="footer-list__item">
-                                        <a href="#" class="footer-list__item-link">
-                                            Explore
-                                        </a>
-                                    </li>
-                                    <li class="footer-list__item">
-                                        <a href="#" class="footer-list__item-link">
-                                            About us
-                                        </a>
-                                    </li>
-                                    <li class="footer-list__item">
-                                        <a href="#" class="footer-list__item-link">
-                                            Plan your trip
-                                        </a>
-                                    </li>
-                                    <li class="footer-list__item">
-                                        <a href="#" class="footer-list__item-link">
-                                            Updates
-                                        </a>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <div class="col no-gutters l-4">
-                                <div class="footer-heading">Destinations</div>
+                <div class="row sm-gutter">
+                    <div class="col l-4 m-6 c-12 mb-30">
+                        <div class="nav-logo footer-logo">
+                            Explore Bali
+                        </div>
+                    </div>
+                    <div class="col l-2 m-6 c-12 mb-30">
+                        <div class="footer-heading">Menu</div>
+                        <ul class="footer-list">
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__item-link">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__item-link">
+                                    Explore
+                                </a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__item-link">
+                                    About us
+                                </a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__item-link">
+                                    Plan your trip
+                                </a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__item-link">
+                                    Updates
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col l-2 m-6 c-12 mb-30">
+                        <div class="footer-heading">Destinations</div>
                                 <ul class="footer-list">
                                     <li class="footer-list__item">
                                         <a href="#" class="footer-list__item-link">
@@ -509,10 +655,9 @@
                                     </li>
                                     
                                 </ul>
-                            </div>
-
-                            <div class="col no-gutters l-4">
-                                <div class="footer-heading">Trip Type</div>
+                    </div>
+                    <div class="col l-2 m-6 c-12 mb-30">
+                        <div class="footer-heading">Trip Type</div>
                                 <ul class="footer-list">
                                     <li class="footer-list__item">
                                         <a href="#" class="footer-list__item-link">
@@ -536,38 +681,71 @@
                                     </li>
                                     
                                 </ul>
-                            </div>
+                    </div>
+                    <div class="col l-2 m-6 c-12 mb-30">
+                        <div class="contact">
+                            <div class="footer-heading">Contact us</div>
+                            <ul class="footer-list">
+                                <li class="footer-list__item">
+                                    <a href="#" class="footer-list__item-link">
+                                        Email: Explorebali@contact.com
+                                    </a>
+                                </li>
+                                <li class="footer-list__item">
+                                    <a href="#" class="footer-list__item-link">
+                                        Tel: +62-36 739 299
+                                    </a>
+                                </li>
+                                
+                                <div class="footer-icon">
+                                    <img src="./assets/icon/footer/fb.svg" alt="">
+                                    <img src="./assets/icon/footer/ins.svg" alt="">
+                                    <img src="./assets/icon/footer/phone.svg" alt="">
+                                    <img src="./assets/icon/footer/bird.svg" alt="">
+            
+                                </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
+                
 
-                <div class="contact">
-                    <div class="footer-heading">Contact us</div>
-                    <ul class="footer-list">
-                        <li class="footer-list__item">
-                            <a href="#" class="footer-list__item-link">
-                                Email: Explorebali@contact.com
-                            </a>
-                        </li>
-                        <li class="footer-list__item">
-                            <a href="#" class="footer-list__item-link">
-                                Tel: +62-36 739 299
-                            </a>
-                        </li>
-                        
-                    </ul>
-                    <div class="footer-icon">
-                        <img src="./assets/icon/footer/fb.svg" alt="">
-                        <img src="./assets/icon/footer/ins.svg" alt="">
-                        <img src="./assets/icon/footer/phone.svg" alt="">
-                        <img src="./assets/icon/footer/bird.svg" alt="">
-
-                    </div>
-                </div>
+               
 
                 <div class="author">@2022. Created By Thành Lê Tiến</div>
             </div>
         </div>
+
+        <div class="taskbar">
+            <a href="#" class="taskbar-link">
+                <img class="taskbar-icon" src="./assets/icon/Phone.svg" alt="">
+            </a>
+    
+            <a href="#" class="taskbar-link">
+                <img class="taskbar-icon" src="./assets/icon/ins.svg" alt="">
+            </a>
+    
+            <a href="#" class="taskbar-link">
+                <img class="taskbar-icon" src="./assets/icon/fb.svg" alt="">
+            </a>
+    
+            <a href="#" class="taskbar-link">
+                <img class="taskbar-icon" src="./assets/icon/twice.svg" alt="">
+            </a>
+
+            <a href="#" class="taskbar-link">
+                <img class="taskbar-icon" src="./assets/icon/yt.svg" alt="">
+            </a>
+
+        </div>
+
+        <div class="mesage">
+            <div class="mesage-icon">
+                <img src="./assets/icon/message.svg" alt="">
+            </div>
+            <div class="mesage-text">How do i</div>
+        </div>
+
     </div>
 
     </div>

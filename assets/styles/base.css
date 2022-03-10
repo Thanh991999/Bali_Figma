@@ -1,9 +1,13 @@
+
+
+
 :root {
     --white-color: #fff;
     --primary-color: #EAFB81;
     --black-color: #000;
     --gray-color: #CEDDCC;
     --header-color: #7C7A28;
+    --red-color: #e34444;
 }
 
 * {
@@ -17,4 +21,8 @@ html {
     line-height: 24px;
     font-family: 'Allura', cursive;
     font-family: 'Poppins', sans-serif;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
 }
