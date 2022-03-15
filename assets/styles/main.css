@@ -370,10 +370,6 @@
     overflow: hidden;
 }
 
-.exclusive-img:hover {
-    transform: scale(1.1);
-}
-
 .exclusive-img::after {
     position: absolute;
     content: '';
