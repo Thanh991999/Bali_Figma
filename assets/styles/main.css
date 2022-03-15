@@ -319,6 +319,7 @@
     background-color: var(--primary-color);
     display: flex;
     box-shadow: 0 0 1px #000;
+    cursor: pointer;
 }
 
 .mesage-icon img {
@@ -367,6 +368,10 @@
     position: relative;
     padding: 8px 25px;
     overflow: hidden;
+}
+
+.exclusive-img:hover {
+    transform: scale(1.1);
 }
 
 .exclusive-img::after {
@@ -588,12 +593,16 @@
 }
 
 .advertise {
+    /* overflow: hidden; */
+}
+
+.advertise-main {
     overflow: hidden;
 }
 
 .advertise-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     height: 195px;
     align-items: center;
     flex-wrap: nowrap;
@@ -743,7 +752,7 @@
     width: 230px;
     height: 271.04px;
     border-radius: 10px;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .customers-info__name {
@@ -850,8 +859,25 @@
 }
 
 .footer-list__item:hover a{
-    color: var(--gray-color);
+    color:#24e8ff;
 }
+
+.footer-list__item:hover .footer-list__item-link:after {
+    width: 100%;
+}
+
+.footer-list__item-link:after {
+    content: "";
+    position: absolute;
+    background-color: #24e8ff;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.2s ease;
+
+}
+
 
 .footer-list__item-link {
     text-decoration: none;
@@ -859,6 +885,7 @@
     font-size: 1.4rem;
     line-height: 2.1rem;
     font-weight: 300;
+    position: relative;
 }
 
 .footer-icon img {

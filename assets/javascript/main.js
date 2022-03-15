@@ -1,5 +1,4 @@
 
-
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -16,10 +15,14 @@ const mainSlide =  $('.customers-review');
 const mainSize = $('.customers-container__main');
 const size = boxImages[0].clientWidth;
 // const size = mainSize.clientWidth;
+const advertiseImage = $$('.advertise-img');
+const adImageSize = advertiseImage[0].clientWidth;
+const advertiseMain = $('.advertise-main');
+const boxAdvertise = $('.advertise-wrap');
 
+// console.log(adImageSize);
 
-
-console.log(size)
+// console.log(size)
 
 const app = {
 
@@ -38,7 +41,6 @@ const app = {
                 overlayMenu.style.display = 'none';
                 //  infoByTicket.style.display = 'none';
                 
-
             }
         }
 
@@ -58,6 +60,16 @@ const app = {
 
         // Xử lý sider
         
+        this.silderCustomer();
+
+        // Xử lý thanh advertisement
+
+        this.silderAdvertise();
+
+    },
+
+    // Xử lý slider
+    silderCustomer : function() {
         let counter = 1;
 
         mainSlide.style.transform = `translateX(${-size * counter}px)`;
@@ -93,9 +105,28 @@ const app = {
 
             }
         })
-
     },
 
+    silderAdvertise : function() {
+        let counter = 1;
+
+        const adImageSize = advertiseImage[0].clientWidth;
+        boxAdvertise.style.transform = `translateX(${- adImageSize* counter}px)`;
+        
+        setInterval(function() {
+            boxAdvertise.style.transition = "transform 0.5s ease-in-out";
+            counter++;
+            boxAdvertise.style.transform = `translateX(${-adImageSize * counter}px)`;
+            
+            if(advertiseImage[counter].id === 'ad-first') {
+                boxAdvertise.style.transition = "none"; 
+                counter = boxImages.length - counter;
+                boxAdvertise.style.transform = `translateX(${-adImageSize * counter}px)`;
+
+            }
+        }, 2000);
+        
+    },
 
     start: function() {
         this.handleEvent();
